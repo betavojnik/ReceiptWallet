@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="endingGradient">#a2e6da</color>
+    <color name="staringGradient">#4f6460</color>
+    <color name="staring2Gradient">#012C24</color>
+    <color name="ending2Gradient">#20302D</color>
+    <color name="splashTextColor">#003333</color>
+    <color name="bar_gray">#d3d3d3</color>
+    <color name="expired_gray">#807878</color>
+    <color name="test_expenses">#2196F3</color>
+    <color name="test_home">#F40A0A</color>
+    <color name="new_receipt_button">#0fa958</color>
+    <color name="new_receipt_button_dark">#0D6838</color>
+    <color name="transparent">#B3FFFFFF</color>
+    <color name="lightGray">#a0beba</color>
+    <color name="lightGrayDark">#2D372E</color>
+    <color name="darkGray">#797777</color>
+    <color name="date_picker_color_accent">#2E7D6F</color>
+    <color name="date_picker_primary_inverse">#02534B</color>
+    <color name="date_picker_color_activated">#A2D9D0</color>
+    <color name="error_indicator_color">#BD3838</color>
+    <color name="cameraReturnButtonColor">#2AFFFFFF</color>
+    <color name="transparentGray">#E0808080</color>
+    <color name="noResults">#80000000</color>
+
+</resources>

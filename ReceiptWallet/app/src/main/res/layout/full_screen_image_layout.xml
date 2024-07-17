@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/image_popup_margin_start_end"
+        android:layout_marginEnd="@dimen/image_popup_margin_start_end"
+        android:layout_marginTop="@dimen/image_popup_margin_top"
+        android:layout_marginBottom="@dimen/image_popup_margin_bottom"
+        app:cardBackgroundColor="@color/transparentGray"
+        app:cardCornerRadius="@dimen/corner_radius_camera_dialog">
+
+        <ImageView
+            android:id="@+id/ivFullScreenImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/btnCloseFullScreenImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/exitXBtn"
+        android:layout_marginTop="@dimen/image_popup_cancel_margin_top"
+        android:layout_marginEnd="@dimen/image_popup_cancel_margin_end"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@android:color/transparent"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:elevation="@dimen/close_button_elevation_camera_dialog"
+        android:src="@drawable/ic_x_button_popup" />
+</RelativeLayout>

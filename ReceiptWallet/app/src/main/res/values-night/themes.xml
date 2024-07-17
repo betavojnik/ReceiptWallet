@@ -1,0 +1,80 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.DefaultTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorControlNormal">@color/expired_gray</item>
+        <item name="backgroundInsetStart">@color/ending2Gradient</item>
+        <item name="backgroundInsetEnd">@color/staring2Gradient</item>
+        <item name="buttonIconTint">@color/new_receipt_button_dark</item>
+        <item name="colorContainer">@color/lightGrayDark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+
+    <style name="Theme.ToolBar" parent="">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Theme.BottomNavigation" parent="@style/Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Theme.SplashScreenTheme" parent="Theme.DefaultTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.ReceiptWallet" parent="Theme.DefaultTheme" />
+
+    <style name="ShapeAppearanceOverlayExtended" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+        <item name="cornerSizeTopLeft">45%</item>
+        <item name="cornerSizeTopRight">45%</item>
+        <item name="cornerSizeBottomLeft">45%</item>
+        <item name="cornerSizeBottomRight">45%</item>
+    </style>
+
+    <style name="CustomDatePickerDialog" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="colorAccent">@color/date_picker_color_accent</item>
+        <item name="android:textColorPrimaryInverse">@color/date_picker_color_accent</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:colorControlActivated">@color/date_picker_primary_inverse</item>
+        <item name="android:headerMonthTextAppearance">@style/CustomStyle</item>
+        <item name="android:headerYearTextAppearance">@style/CustomStyle</item>
+    </style>
+
+    <style name="CustomStyle">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="cursorColor">@color/white</item>
+    </style>
+
+    <style name="CategoryDialogStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/gray_background</item>
+    </style>
+
+    <style name="CategoryDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CategoryDialogStyle</item>
+    </style>
+
+    <style name="PermissionsDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:color">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+</resources>

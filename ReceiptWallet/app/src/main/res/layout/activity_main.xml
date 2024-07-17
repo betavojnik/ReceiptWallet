@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/action_name_bar"
+            style="@style/Theme.ToolBar"
+            android:layout_width="@dimen/toolbar_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary">
+
+            <ImageButton
+                android:id="@+id/deleteWarrantyBtn"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="@dimen/trash_can_details_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/trash_can_margin_end"
+                android:background="?attr/colorPrimary"
+                android:contentDescription="@string/deleteWarrantyBtn"
+                android:src="@drawable/ic_trash_can_black"
+                android:visibility="gone" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_navigation_height"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/app_nav" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/Theme.BottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemRippleColor="@null"
+        app:itemTextColor="@drawable/bottom_navigation_selector"
+        app:menu="@menu/main_bottom_menu" />
+
+</LinearLayout>

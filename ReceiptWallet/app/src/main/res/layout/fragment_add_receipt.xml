@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scroll_view_height"
+        android:layout_weight="1"
+        android:background="@drawable/gradient_background"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutContainerForNewReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".fragments.HomeFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gray_background_height"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/layout_margin_start_end"
+                android:layout_marginTop="@dimen/layout_margin_top_bottom"
+                android:layout_marginEnd="@dimen/layout_margin_start_end"
+                android:background="@drawable/gray_background"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivAddImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/addReceiptPhoto"
+                    android:src="@drawable/image_icon"
+                    android:tag="@string/image_icon_tag" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginTop="@dimen/layout_margin_top_bottom"
+                android:background="@color/darkGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/layout_margin_start_end"
+                android:layout_marginTop="@dimen/layout_margin_top_bottom"
+                android:layout_marginEnd="@dimen/layout_margin_start_end"
+                android:layout_marginBottom="@dimen/layout_margin_top_bottom"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/tvNameLabel"
+                    android:text="@string/name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_text_size" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_height"
+                    android:background="@drawable/edit_text_borders"
+                    android:contentDescription="@string/tvName"
+                    android:drawableEnd="@drawable/error_indicator"
+                    android:hint="@string/enter_name"
+                    android:inputType="textVisiblePassword"
+                    android:paddingStart="@dimen/et_padding_start_end"
+                    android:paddingEnd="@dimen/et_padding_start_end"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/et_text_size" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvPurchaseDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tv_margin_top"
+                    android:contentDescription="@string/tvPurchaseDateLabel"
+                    android:text="@string/purchase_date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_text_size" />
+
+                <EditText
+                    android:id="@+id/etPurchaseDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_height"
+                    android:background="@drawable/edit_text_borders"
+                    android:contentDescription="@string/dpPurchaseDate"
+                    android:drawableEnd="@drawable/error_indicator"
+                    android:focusable="false"
+                    android:hint="@string/enter_date"
+                    android:paddingStart="@dimen/et_padding_start_end"
+                    android:paddingEnd="@dimen/et_padding_start_end"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/et_text_size" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvWarrantyLengthLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tv_margin_top"
+                    android:contentDescription="@string/tvWarrantyLengthLabel"
+                    android:text="@string/warranty_length"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_text_size" />
+
+                <EditText
+                    android:id="@+id/etWarrantyLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_height"
+                    android:background="@drawable/edit_text_borders"
+                    android:contentDescription="@string/etWarrantyLength"
+                    android:drawableEnd="@drawable/error_indicator"
+                    android:hint="@string/enter_length"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:paddingStart="@dimen/et_padding_start_end"
+                    android:paddingEnd="@dimen/et_padding_start_end"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/et_text_size" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCategoriesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tv_margin_top"
+                    android:contentDescription="@string/tvCategoryLabel"
+                    android:text="@string/categories"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_text_size" />
+
+                <EditText
+                    android:id="@+id/etCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_height"
+                    android:background="@drawable/edit_text_borders"
+                    android:contentDescription="@string/tvCategory"
+                    android:drawableEnd="@drawable/error_indicator"
+                    android:focusable="false"
+                    android:hint="@string/choose_category"
+                    android:paddingStart="@dimen/et_padding_start_end"
+                    android:paddingEnd="@dimen/et_padding_start_end"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/lightGray"
+                    android:textSize="@dimen/et_text_size" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCostLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tv_margin_top"
+                    android:contentDescription="@string/tvCostLabel"
+                    android:text="@string/cost"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_height"
+                    android:background="@drawable/edit_text_borders"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etCost"
+                        android:layout_width="@dimen/zero_width"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/etCost"
+                        android:drawableEnd="@drawable/error_indicator"
+                        android:hint="@string/enter_cost"
+                        android:inputType="numberDecimal"
+                        android:maxLength="15"
+                        android:paddingStart="@dimen/et_padding_start_end"
+                        android:paddingEnd="@dimen/et_padding_start_end"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="@dimen/et_text_size" />
+
+                    <RadioGroup
+                        android:layout_width="@dimen/zero_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:focusable="false"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/et_padding_start_end">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/rbRsd"
+                            android:layout_width="@dimen/zero_width"
+                            android:layout_height="@dimen/radio_button_height"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_left_selector"
+                            android:contentDescription="@string/rbRsd"
+                            android:text="@string/rsd"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/rbEuro"
+                            android:layout_width="@dimen/zero_width"
+                            android:layout_height="@dimen/radio_button_height"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_button_right_selector"
+                            android:contentDescription="@string/rbEuro"
+                            android:text="@string/euro"
+                            android:textColor="@color/black" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvInvalidFieldsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/no_image_error_top_margin"
+                    android:text=""
+                    android:textColor="@color/error_indicator_color"
+                    android:textSize="@dimen/no_image_error_text_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveNewReceipt"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"
+            android:contentDescription="@string/btnSaveNewReceipt"
+            android:text="@string/save"
+            android:textColor="?attr/colorSecondary"
+            android:textAllCaps="false"
+            android:textSize="@dimen/tv_text_size" />
+
+        <Space
+            android:layout_width="@dimen/space_width"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"
+            android:contentDescription="@string/btnCancel"
+            android:text="@string/cancel"
+            android:textColor="?attr/colorSecondary"
+            android:textAllCaps="false"
+            android:textSize="@dimen/tv_text_size" />
+
+    </LinearLayout>
+</LinearLayout>

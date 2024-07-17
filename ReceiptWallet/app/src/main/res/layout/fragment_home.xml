@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/search_linear_layout_padding_left"
+        android:paddingRight="@dimen/search_linear_layout_padding_right"
+        android:paddingVertical="@dimen/search_linear_layout_padding_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            android:imeOptions="actionDone"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/tfSearch"
+            android:maxLines="1"
+            android:textSize="@dimen/search_text_size"
+            android:inputType="text"
+            style="@style/EditTextStyle"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/searchBtn"
+            android:src="@drawable/ic_search" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="false" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNoResultsFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/noResults"
+            android:text="" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newReceiptButton"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/new_warranty_end_margin"
+            android:layout_marginBottom="@dimen/new_warranty_button_margin"
+            android:contentDescription="@string/addNewReceiptBtn"
+            android:outlineProvider="@null"
+            android:scaleType="center"
+            android:src="@drawable/ic_new_receipt_button"
+            app:backgroundTint="@android:color/transparent"
+            app:elevation="@dimen/new_warranty_button_elevation"
+            app:maxImageSize="@dimen/new_warranty_button_size"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended"
+            app:tint="?attr/buttonIconTint" />
+
+    </FrameLayout>
+</LinearLayout>

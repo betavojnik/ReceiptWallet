@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvChooseCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/bottom_sheet_padding"
+        android:text="@string/choose_category"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="@dimen/tv_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bold_line_height"
+        android:layout_marginTop="@dimen/bottom_sheet_margin_top"
+        android:background="?attr/colorSecondary" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCategories"
+        android:contentDescription="@string/recyclerViewCategories"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recycler_view_height"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/category_item" />
+</LinearLayout>
